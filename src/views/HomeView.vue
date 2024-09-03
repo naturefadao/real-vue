@@ -43,8 +43,16 @@ const events = ref([
 </script>
 
 <template>
-  <div class="home">
+  <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
     <!-- ES6 模块导入语法 -->
   </div>
 </template>
+<style scoped>
+/*作用范围是一下列出的组件*/
+.events {
+  display: flex;
+  flex-direction: column; /*设置主轴的方向*/
+  align-items: center; /*设置交叉轴上的对齐方式*/
+}
+</style>

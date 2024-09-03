@@ -1,4 +1,5 @@
 <script setup>
+//这是整个应用程序的父组件
 import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 </script>
