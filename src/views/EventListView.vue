@@ -19,7 +19,7 @@ function updateMessage() {
 */
 const events = ref(null)
 onMounted(() => {
-  EventService.getEvents1() //等同下面注释的
+  EventService.getEvents() //等同下面注释的
     // axios
     //   .get('https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3/events')
     .then((response) => {

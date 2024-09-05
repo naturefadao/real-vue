@@ -18,9 +18,11 @@ defineProps({
 // organizer: 'Kat Laydee'
 // })
 </script>
-
+<!-- import { useRoute } from 'vue-Router'
+const route = useRoute()
+<span>Event #{{ route.params.id }}</span> -->
 <template>
-  <RouterLink to="/event/123">
+  <RouterLink class="event-link" :to="{ name: 'event-details', params: { id: event.id } }">
     <!--硬编码路径/event/123-->
     <div class="event-card">
       <!-- display event data -->
@@ -42,5 +44,9 @@ defineProps({
 .event-card:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.event-link {
+  color: rgb(193, 151, 97);
+  text-decoration: dashed;
 }
 </style>
