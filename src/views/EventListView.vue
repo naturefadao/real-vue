@@ -5,7 +5,7 @@ import EventCard from '@/components/EventCard.vue'
 @ 是一种常用的别名，用于简化模块导入路径。这个别名通常在项目的配置文件中定义，例如 Webpack、Vite 或其他构建工具的配置。
 @ 符号通常代表项目的根目录或者 src 目录。这样写可以让你在导入模块时避免使用相对路径，这样可以使导入路径更加简洁和可读。
 */
-import EventService from '@/services/EventSevice.js'
+import EventService from '../services/EventService.js'
 import { ref, onMounted } from 'vue'
 /*ref 是 Vue 3 的 Composition API 中引入的一个概念，用于创建响应式引用。在 Vue 2 中，
 响应式数据通常是通过 data() 返回的对象来管理的，而在 Vue 3 中，ref 和 reactive 用于管理响应式状态。
@@ -23,10 +23,11 @@ onMounted(() => {
     // axios
     //   .get('https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3/events')
     .then((response) => {
+      console.log('9999999', response)
       events.value = response.data
     })
     .catch((error) => {
-      console.log(error)
+      console.log('ppppppppp', error)
     })
 })
 </script>

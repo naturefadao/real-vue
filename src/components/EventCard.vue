@@ -20,11 +20,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="event-card">
-    <!-- display event data -->
-    <h2>{{ event.title }}</h2>
-    <span>@{{ event.time }} on {{ event.data }}</span>
-  </div>
+  <RouterLink to="/event/123">
+    <!--硬编码路径/event/123-->
+    <div class="event-card">
+      <!-- display event data -->
+      <h2>{{ event.title }}</h2>
+      <span>@{{ event.time }} on {{ event.data }}</span>
+    </div>
+  </RouterLink>
 </template>
 
 <style scoped>
