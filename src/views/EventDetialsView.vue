@@ -10,7 +10,7 @@ import EventService from '../services/EventService.js'
 const event = ref(null)
 const id = ref(123)
 onMounted(() => {
-  EventService.getEvent(id.value)
+  EventService.getEvents(id.value)
     .then((response) => {
       event.value = response.data
     })
